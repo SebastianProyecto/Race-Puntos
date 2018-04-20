@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e5442afd65bd4eda8b0f1c32bc774ecf" Name="Diagram1">
+        <EntityTypeShape EntityType="RacePuntosModel.cargos" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RacePuntosModel.detalle_vehiculos" Width="1.5" PointX="5.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="RacePuntosModel.estaciones_de_servicio" Width="1.5" PointX="3" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RacePuntosModel.personas" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="RacePuntosModel.puntos" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="RacePuntosModel.reservas" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RacePuntosModel.servicios" Width="1.5" PointX="7.75" PointY="2" IsExpanded="true" />
+        <AssociationConnector Association="RacePuntosModel.FK__personas__numero__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="RacePuntosModel.FK__reservas__puntos__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="RacePuntosModel.FK__puntos__puntos_a__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="RacePuntosModel.FK__reservas__id_usu__5DCAEF64" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="RacePuntosModel.detalle_puntos" Width="1.5" PointX="8.5" PointY="5.75" />
+        <EntityTypeShape EntityType="RacePuntosModel.vehiculo" Width="1.5" PointX="11" PointY="4.625" />
+        <AssociationConnector Association="RacePuntosModel.FK__detalle_p__id_es__5535A963" />
+        <AssociationConnector Association="RacePuntosModel.FK__detalle_p__punto__5441852A" />
+        <AssociationConnector Association="RacePuntosModel.FK__vehiculo__codigo__59FA5E80" />
+        <AssociationConnector Association="RacePuntosModel.FK__vehiculo__cilind__59063A47" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

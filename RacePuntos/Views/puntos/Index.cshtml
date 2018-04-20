@@ -1,0 +1,61 @@
+﻿@model IEnumerable<RacePuntos.Datos.puntos>
+
+@{
+    ViewBag.Title = "Historial adquisición de puntos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2></h2>
+
+<p>
+
+</p>
+<div class="container">
+    <div class="col-md-12 Puntos">
+        @*<div class="row" style="margin-bottom: 3%;">
+                <div>
+                    <div class="col-md-3">
+                        <label class="control-label">Fecha desde: </label>
+                        <input type="date" name="cDesde" id="cDesde" class="form-control fecha" />
+                    </div>
+
+                    <div class="col-md-3">
+                        <label class="control-label">Fecha hasta: </label>
+                        <input type="date" name="cHasta" id="cHasta" class="form-control fecha" />
+                    </div>
+                    <div class="col-md-1">
+                        <img title="Buscar" src="~/Images/search-icon.png" id="buscar"  style="width:60%; margin-top:38%; cursor:pointer;"/>
+                    </div>
+                </div>
+            </div>*@
+        <div class="row">
+            <div>
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-default">
+                        <a href="@Url.Action("../personas/Report",new {id= "PDF", rdlc = "History1", NameDataSet="History1"})" target="_blank" style="color:#000 !important; font-weight:bolder;">
+                            Descargar Informe
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+
+            <table id="LisAquisicion" class="table table-responsive cell-border" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Usuario</th>
+                        <th>Puntos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @Html.Raw(ViewData["_TableHistorial1"])
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

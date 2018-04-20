@@ -1,0 +1,166 @@
+﻿.body_login {
+    background-image: url('../Images/fonts/Fondo Login Web.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+    padding-left: 10%;
+    padding-right: 10px;
+    padding-top: 15%;
+    padding-bottom: 21%;
+}
+
+@media only screen and (max-width: 1400px) {
+    .body_login {
+        background-image: url('../Images/fonts/Fondo Login Web.png');
+        background-repeat: no-repeat;
+        background-position: top center;
+        padding-left: 10%;
+        padding-right: 10px;
+        padding-top: 10%;
+        padding-bottom: 21%;
+    }
+}
+
+
+
+.login {
+    width: 40%;
+    position: relative;
+    left: 30%;
+    margin: -18px 0px 0px -236px;
+    background: rgba(222, 207, 207, 0.2);
+    padding: 20px 30px;
+    border-radius: 18px;
+    box-shadow: 7px 9px 20px 8px rgba(0, 0, 0, 0.2), inset 0px 0px 79px 0px rgba(0, 0, 0, 0);
+}
+
+@media only screen and (max-width: 1400px){
+    .login {
+        width: 45%;
+    }
+}
+
+.input_login {
+    border-radius: 18px !important;
+    width: 90%;
+    height: 27px;
+}
+
+.label_login {
+    font-size: 13px;
+    font-weight: bolder;
+}
+
+.h_login {
+    font-size: 30px;
+    margin-bottom: 15%;
+    font-family: cursive;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.button_login {
+    background-color: #3bb3e0;
+    border-radius: 20px !important;
+    width:50% ;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+    color: #fff !important;
+    position: relative;
+    padding: 10px 20px;
+    padding-right: 50px;
+    background-image: linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+    background-image: -o-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+    background-image: -moz-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+    background-image: -webkit-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+    background-image: -ms-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%) !important;
+    background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(44,160,202)), color-stop(1, rgb(62,184,229))) !important;
+    -webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    -o-border-radius: 5px !important;
+    border-radius: 20px !important;
+    -webkit-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #156785, 0px 10px 5px #999 !important;
+    -moz-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #156785, 0px 10px 5px #999 !important;
+    -o-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #156785, 0px 10px 5px #999 !important;
+    box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #156785, 0px 10px 5px #999 !important;
+}
+
+@media only screen and (max-width: 1400px) {
+    .button_login {
+        width:70%;
+    }
+}
+
+    .button_login:active {
+        top: 3px;
+        background-image: linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
+        background-image: -o-linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
+        background-image: -moz-linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
+        background-image: -webkit-linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
+        background-image: -ms-linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
+        background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(62,184,229)), color-stop(1, rgb(44,160,202)) );
+        -webkit-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #156785, 0px 5px 3px #999;
+        -moz-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #156785, 0px 5px 3px #999;
+        -o-box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #156785, 0px 5px 3px #999;
+        box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #156785, 0px 5px 3px #999;
+    }
+
+    .button_login::before {
+        background-color: #2591b4;
+        background-image: url(../Images/right_arrow.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        content: "";
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        margin-top: -9px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+        -webkit-box-shadow: inset 0px 1px 0px #052756, 0px 1px 0px #60c9f0;
+        -moz-box-shadow: inset 0px 1px 0px #052756, 0px 1px 0px #60c9f0;
+        -o-box-shadow: inset 0px 1px 0px #052756, 0px 1px 0px #60c9f0;
+        box-shadow: inset 0px 1px 0px #052756, 0px 1px 0px #60c9f0;
+    }
+
+    .button_login:active::before {
+        top: 50%;
+        margin-top: -12px;
+        -webkit-box-shadow: inset 0px 1px 0px #60c9f0, 0px 3px 0px #0e3871, 0px 6px 3px #1a80a6;
+        -moz-box-shadow: inset 0px 1px 0px #60c9f0, 0px 3px 0px #0e3871, 0px 6px 3px #1a80a6;
+        -o-box-shadow: inset 0px 1px 0px #60c9f0, 0px 3px 0px #0e3871, 0px 6px 3px #1a80a6;
+        box-shadow: inset 0px 1px 0px #60c9f0, 0px 3px 0px #0e3871, 0px 6px 3px #1a80a6;
+    }
+
+
+.Text_manual {
+    width: 35%;
+    position: relative;
+    color: #FFF;
+    left: 78%;
+    margin: -12% 0px 0px -14%;
+    background: rgb(59, 180, 225);
+    padding: 20px 30px;
+    border-radius: 100px;
+    box-shadow: 7px 9px 20px 8px rgba(0, 0, 0, 0.2), inset 0px 0px 79px 0px rgba(0, 0, 0, 0);
+}
+
+@media only screen and (max-width: 1400px) {
+    .Text_manual {
+        width: 46%;
+        position: relative;
+        color: #FFF;
+        left: 68%;
+        margin: -22% 0px 0px -14%;
+        background: rgb(59, 180, 225);
+        padding: 20px 30px;
+        border-radius: 100px;
+        box-shadow: 7px 9px 20px 8px rgba(0, 0, 0, 0.2), inset 0px 0px 79px 0px rgba(0, 0, 0, 0);
+    }
+}

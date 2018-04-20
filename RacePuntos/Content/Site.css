@@ -1,0 +1,478 @@
+﻿body {
+    background-image: url('../Images/fonts/fondo-de-pantalla-degradado-azul.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+    overflow: auto;
+}
+
+@media only screen and (min-width: 767px) {
+    body {
+        background-image: url('../Images/fonts/fondo-de-pantalla-degradado-azul.png');
+        overflow: visible;
+    }
+}
+
+.dropdown-menu>li>a{
+    color:#000 !important;
+}
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus{
+    background-color:#FFF !important;
+}
+
+
+input {
+    text-transform: uppercase;
+}
+
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+/*******************************************MENU*******************************************************/
+
+.wrap {
+    display: inline-block;
+    -webkit-box-shadow: 0 0 0px #fff;
+    -moz-box-shadow: 0 0 0px #fff;
+    box-shadow: 0 0 0px #fff;
+    margin-top: 2%;
+}
+
+/* a little "umph" */
+/*.decor {
+    background: #6EAF8D;
+    background: -webkit-linear-gradient(left, #CDEBDB 50%, #6EAF8D 50%);
+    background: -moz-linear-gradient(left, #CDEBDB 50%, #6EAF8D 50%);
+    background: -o-linear-gradient(left, #CDEBDB 50%, #6EAF8D 50%);
+    background: linear-gradient(left, white 50%, #6EAF8D 50%);
+    background-size: 50px 25%;
+    padding: 2px;
+    display: block;
+}*/
+
+a {
+    text-decoration: none;
+    color: #fff !important;
+    display: block;
+}
+
+ul {
+    list-style: none;
+    position: relative;
+    text-align: left;
+}
+
+li {
+    float: left;
+}
+
+/* clear'n floats */
+ul:after {
+    clear: both;
+}
+
+ul:before,
+ul:after {
+    content: " ";
+    display: table;
+}
+
+nav {
+    position: relative;
+    background: #2B2B2B;
+    background-image: -webkit-linear-gradient(bottom, #0469b3 7%, #0469b3 100%);
+    background-image: -moz-linear-gradient(bottom, #0469b3 7%, #0469b3 100%);
+    background-image: -o-linear-gradient(bottom, #0469b3 7%, #0469b3 100%);
+    background-image: linear-gradient(bottom, #0469b3 7%, #0469b3 100%);
+    text-align: center;
+    letter-spacing: 1px;
+    text-shadow: 0px 0px 0px #ffffff;
+    -webkit-box-shadow: 0px 0px 20px 5px #fff;
+    -moz-box-shadow: 0px 0px 20px 5px #fff;
+    box-shadow: 0px 0px 20px 5px #fff;
+    border-radius: 15px;
+}
+
+/* prime */
+ul.primary li a {
+    display: block;
+    padding: 20px 30px;
+    border-radius: 15px;
+    border-right: 2px solid #FFF;
+}
+
+ul.primary li:last-child a {
+    /*border-right: none;*/
+}
+
+ul.primary li a:hover {
+    color: #000;
+}
+
+/* subs */
+ul.sub {
+    position: absolute;
+    z-index: 200;
+    box-shadow: 2px 2px 20px 5px #ffffff;
+    /*width: 35%;*/
+    display: none;
+}
+
+    ul.sub li {
+        float: none;
+        margin: 0;
+    }
+
+        ul.sub li a {
+            border-bottom: 1px dotted #ccc;
+            border-right: none;
+            color: #ffffff !important;
+            padding: 15px 30px;
+        }
+
+        ul.sub li:last-child a {
+            border-bottom: none;
+        }
+
+        ul.sub li a:hover {
+            color: #000;
+            background: #eeeeee;
+        }
+
+/* sub display*/
+ul.primary li:hover ul {
+    display: block;
+    background: #0469b3;
+}
+
+/* keeps the tab background white */
+ul.primary li:hover a {
+    background: #0469b3;
+    color: #666;
+    text-shadow: none;
+}
+
+ul.primary li:hover > a {
+    color: #000;
+}
+
+@media only screen and (max-width: 600px) {
+    .decor {
+        padding: 3px;
+    }
+
+    .wrap {
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    li {
+        float: none;
+    }
+
+    ul.primary li:hover a {
+        background: none;
+        color: #8B8B8B;
+        text-shadow: 1px 1px #000;
+    }
+
+    ul.primary li:hover ul {
+        display: block;
+        background: #272727;
+        color: #fff;
+    }
+
+    ul.sub {
+        display: block;
+        position: static;
+        box-shadow: none;
+        width: 100%;
+    }
+
+        ul.sub li a {
+            background: #272727;
+            border: none;
+            color: #8B8B8B;
+        }
+
+            ul.sub li a:hover {
+                color: #ccc;
+                background: none;
+            }
+}
+
+/*******************************************FIN MENU**********************************************************/
+
+
+/******************************************QUIENES SOMOS******************************************************/
+
+.QuienesSomos {
+    width: 90%;
+    height: 350px;
+    position: relative;
+    color: #000;
+    left: 78%;
+    margin: -45% 0px 0px -75%;
+    background: #d6e9d4;
+    padding: 1% 5%;
+    border-radius: 10px;
+    box-shadow: 7px 9px 20px 8px rgba(0, 0, 0, 0.2), inset 0px 0px 79px 0px rgba(0, 0, 0, 0);
+}
+
+.h4_QS {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    text-align: center;
+}
+
+/******************************************FIN QUIENES SOMOS**************************************************/
+
+
+/******************************************PUNTOS******************************************************/
+
+.Puntos {
+    width: 100%;
+    height: auto;
+    position: relative;
+    color: #000;
+    left: 23%;
+    margin: 0px 0px 0px -22%;
+    background: #0469b3;
+    padding: 1% 5%;
+    border-radius: 10px;
+    box-shadow: 7px 9px 20px 8px rgba(0, 0, 0, 0.2), inset 0px 0px 79px 0px rgba(0, 0, 0, 0);
+}
+
+/*.h4_QS{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight:bolder;
+    text-align:center;
+}*/
+
+/******************************************FIN PUNTOS**************************************************/
+
+/******************************************AYUDA******************************************************/
+
+.Ayuda {
+    width: 90%;
+    height: auto;
+    position: relative;
+    color: #000;
+    left: 78%;
+    margin: -110px 0px 0px -264px;
+    background: #d6e9d4;
+    padding: 6% 5%;
+    border-radius: 10px;
+    box-shadow: 7px 9px 20px 8px rgba(0, 0, 0, 0.2), inset 0px 0px 79px 0px rgba(0, 0, 0, 0);
+}
+
+.h2_Help {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.btn-primary_help {
+    color: #000;
+    font-weight: bolder;
+    font-size: 17px;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    margin-left: 31%;
+    margin-top: 9%;
+    margin-bottom: 15%;
+}
+
+/******************************************FIN AYUDA*************************************************/
+
+/******************************************USUARIO NUEVO******************************************************/
+
+.Usuario {
+    width: 85%;
+    height: auto;
+    position: relative;
+    color: #000;
+    left: 78%;
+    margin: 25px 0px 0px -437px;
+    background: #0469b3;
+    padding: 1% 5%;
+    border-radius: 10px;
+    box-shadow: 7px 9px 20px 8px rgba(0, 0, 0, 0.2), inset 0px 0px 79px 0px rgba(0, 0, 0, 0);
+}
+
+.h4_Usr {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    color: #FFF;
+}
+
+.label_user {
+    font-size: 12px;
+    color: #FFF;
+}
+
+.form-control_user {
+    width: 80%;
+    height: 28px;
+    font-size: 12px;
+    border-radius: 12px;
+}
+
+.btn-default_usr {
+    color: #000;
+    font-weight: bolder;
+    font-size: 17px;
+    background-color: #d4d6d8;
+    border-color: #ffffff;
+    margin-left: 25%;
+    margin-top: 9%;
+    margin-bottom: 15%;
+    width: 60%;
+}
+
+/******************************************FIN USUARIO NUEVO**************************************************/
+
+/******************************************SERVICIOS******************************************************/
+
+.Servicio1 {
+    width: 12%;
+    height: 200px;
+    position: relative;
+    color: #000;
+    left: 78%;
+    margin: -20% 0px 0px -81%;
+    background: #0469b3;
+    padding: 1% 1%;
+    border-radius: 10px;
+    box-shadow: 7px 9px 20px 8px rgba(0, 0, 0, 0.2), inset 0px 0px 79px 0px rgba(0, 0, 0, 0);
+}
+
+.Servicio2 {
+    width: 12%;
+    height: 200px;
+    position: relative;
+    color: #000;
+    left: 78%;
+    margin: -5% 0px 0px -62%;
+    background: #0469b3;
+    padding: 1% 1%;
+    border-radius: 10px;
+    box-shadow: 7px 9px 20px 8px rgba(0, 0, 0, 0.2), inset 0px 0px 79px 0px rgba(0, 0, 0, 0);
+}
+
+.Servicio3 {
+    width: 12%;
+    height: 200px;
+    position: relative;
+    color: #000;
+    left: 78%;
+    margin: -30% 0px 0px -42%;
+    background: #0469b3;
+    padding: 1% 1%;
+    border-radius: 10px;
+    box-shadow: 7px 9px 20px 8px rgba(0, 0, 0, 0.2), inset 0px 0px 79px 0px rgba(0, 0, 0, 0);
+}
+
+.Servicio4 {
+    width: 12%;
+    height: 200px;
+    position: relative;
+    color: #000;
+    left: 78%;
+    margin: -5% 0px 0px -22%;
+    background: #0469b3;
+    padding: 1% 1%;
+    border-radius: 10px;
+    box-shadow: 7px 9px 20px 8px rgba(0, 0, 0, 0.2), inset 0px 0px 79px 0px rgba(0, 0, 0, 0);
+}
+
+.Servicio5 {
+    width: 12%;
+    height: 200px;
+    position: relative;
+    color: #000;
+    left: 78%;
+    margin: -30% 0px 20% -1%;
+    background: #0469b3;
+    padding: 1% 1%;
+    border-radius: 10px;
+    box-shadow: 7px 9px 20px 8px rgba(0, 0, 0, 0.2), inset 0px 0px 79px 0px rgba(0, 0, 0, 0);
+}
+
+.h3_SVR {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    color: #FFF;
+}
+
+/******************************************FIN SERVICIOS*************************************************/
+
+/******************************************CONTACTENOS*************************************************/
+.contact {
+    width: 31%;
+    position: relative;
+    /* top: 119%; */
+    left: 30%;
+    margin: -1% 0px 0px -28%;
+    background: #0469b3;
+    padding: 20px 30px;
+    border-radius: 18px;
+    box-shadow: 7px 9px 20px 8px rgba(0, 0, 0, 0.2), inset 0px 0px 79px 0px rgba(0, 0, 0, 0);
+}
+
+.input_contact {
+    border-radius: 18px !important;
+    width: 90%;
+    height: 27px;
+}
+
+.label_contact {
+    font-size: 13px;
+    font-weight: normal;
+    color: #FFF;
+}
+
+.h_contact {
+    font-size: 30px;
+    margin-bottom: 7%;
+    font-family: cursive;
+    text-align: center;
+    font-weight: bolder;
+    color: #FFF;
+}
+
+.btn-primary_cont {
+    color: #FFF;
+    font-weight: normal;
+    font-size: 15px;
+    background-color: #093f6f;
+    border-color: #ffffff;
+    margin-left: 31%;
+    margin-top: -5%;
+    margin-bottom: -10%;
+    border-radius: 10px;
+}
+/******************************************FIN CONTACTENOS*************************************************/

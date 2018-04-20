@@ -1,0 +1,49 @@
+﻿@{
+  Layout = "~/Views/Shared/_Layout.cshtml";
+  ViewBag.Title = "Contactenos";
+}
+<div class="contact">
+@using (Html.BeginForm("Email", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form", name = "Login_Form", id = "Login_Form" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <h2 class="h_contact">Contacto</h2>
+        <div class="form-group">
+            <label class="control-label col-md-2 label_contact">Nombre:</label>
+            <div class="col-md-10">
+                <input type="text" id="nombre" name="nombre" class="form-control input_contact" required />
+                <span class="field-validation-valid text-danger" data-valmsg-for="nombre" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2 label_contact">Teléfono:</label>
+            <div class="col-md-10">
+                <input type="text" id="telefono" name="telefono" class="form-control input_contact" onkeypress="return validaNum(event)" required />
+                <span class="field-validation-valid text-danger" data-valmsg-for="telefono" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2 label_contact">Correo:</label>
+            <div class="col-md-10">
+                <input type="text" id="correo" name="correo" class="form-control input_contact" required />
+                <span class="field-validation-valid text-danger" data-valmsg-for="correo" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2 label_contact">Inquietud:</label>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                <textarea type="text" id="inquietud" name="inquietud" rows="5" cols="50" class="form-control input_contact" required></textarea>
+                <span class="field-validation-valid text-danger" data-valmsg-for="inquietud" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-5 col-md-10">
+                <button type="submit" class="btn btn-primary btn-primary_cont" id="enviar_cont">Enviar</button>
+            </div>
+        </div>
+    </div>}
+</div>

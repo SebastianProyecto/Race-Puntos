@@ -1,0 +1,229 @@
+﻿@model RacePuntos.Datos.personas
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Registrarse";
+    //UsuarioVehiculo = "1";
+}
+
+@*@using(Html.BeginForm()) {*@
+
+<script>
+    $(document).ready(function () {
+        Message = "@TempData["Mensaje"]";
+        if (Message != "") {
+            if (Message.split("~")[0] == "0") {
+                swal("Correcto", Message.split("~")[1], "success");
+            } else {
+                swal("Error", Message.split("~")[1], "error");
+            }
+        }
+    });
+</script>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="Usuario">
+                @using (Html.BeginForm("Create", "personas", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form", name = "Create_User", id = "Create_User" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <h4 class="h4_Usr">Registro nuevo usuario de la web</h4>
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        <label class="control-label col-md-4 label_user">Tipo documento:</label>
+                        <div class="col-md-8">
+                            <select class="form-control form-control_user" id="tipo_documento" name="tipo_documento" required>
+                                <option value="">[SELECCIONE]</option>
+                                <option value="C.C.">Cedula de Ciudadania</option>
+                                <option value="NIT">NIT Empresa</option>
+                                <option value="R.C.">Registro civil</option>
+                                <option value="C.E.">Cedula de Extranjeria</option>
+                            </select>
+                            <span class="field-validation-valid text-danger" data-valmsg-for="tipo_documento" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4 label_user">No. Documento:</label>
+                        <div class="col-md-8">
+                            <input type="text" id="documento" name="documento" class="form-control form-control_user InputNum" onkeypress="return validaNum(event)" required />
+                            <span class="field-validation-valid text-danger" data-valmsg-for="documento" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4 label_user">Nombres:</label>
+                        <div class="col-md-8">
+                            <input type="text" id="nombres" name="nombres" class="form-control form-control_user" required />
+                            <span class="field-validation-valid text-danger" data-valmsg-for="nombres" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4 label_user">Apellidos:</label>
+                        <div class="col-md-8">
+                            <input type="text" id="apellidos" name="apellidos" class="form-control form-control_user" required />
+                            <span class="field-validation-valid text-danger" data-valmsg-for="apellidos" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 label_user">Fecha nacimiento:</label>
+                        <div class="col-md-8">
+                            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" class="form-control form-control_user" required />
+                            <span class="field-validation-valid text-danger" data-valmsg-for="fecha_nacimiento" data-valmsg-replace="true"></span>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4 label_user">Dirección:</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control form-control_user" id="direccion" name="direccion" required />
+                            <span class="field-validation-valid text-danger" data-valmsg-for="direccion" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4 label_user">Celular:</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control form-control_user" id="numero_celular" name="numero_celular" onkeypress="return validaNum(event)" required />
+                            <span class="field-validation-valid text-danger" data-valmsg-for="numero_celular" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4 label_user">Correo:</label>
+                        <div class="col-md-8">
+                            <input type="email" class="form-control form-control_user" id="correoElectronico" name="correoElectronico" required />
+                            <span class="field-validation-valid text-danger" data-valmsg-for="correoElectronico" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>    if (Session["CARGO"].ToString() == "1")
+                    {
+                        <div class="form-group">
+                            <label class="control-label col-md-4 label_user">Rol:</label>
+                            <div class="col-md-8">
+                                <select id="rol" name="rol" class="form-control form-control_user" required>
+                                    <option value="">[SELECCIONE]</option>
+                                    <option value="ADMIN">Administrador</option>
+                                    <option value="USUARIO">Usuario</option>
+                                    <option value="N/A">N/A</option>
+                                </select>
+                                <span class="field-validation-valid text-danger" data-valmsg-for="rol" data-valmsg-replace="true"></span>
+                            </div>
+                        </div>}
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4 label_user">Contraseña:</label>
+                        <div class="col-md-8">
+                            <input type="password" class="form-control form-control_user" id="contrasena" name="contrasena" required />
+                            <span class="field-validation-valid text-danger" data-valmsg-for="contrasena" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="display:block;">
+                        <label class="control-label col-md-4 label_user">Cargo:</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control form-control_user" id="cargo" name="cargo" required />
+                            <span class="field-validation-valid text-danger" data-valmsg-for="cargo" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="display:none;">
+                        <label class="control-label col-md-4 label_user">Id Usuario:</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control form-control_user" id="id_usuario_creacion" name="id_usuario_creacion" value="APPWEB" required />
+                            <span class="field-validation-valid text-danger" data-valmsg-for="id_usuario_creacion" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-8">
+                            <button type="button" class="btn btn-default btn-default_usr" id="guarda_usr">Registrar</button>
+                        </div>
+                    </div>}
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="Usuario">
+                @using (Html.BeginForm("Create", "vehiculo", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form", name = "Create_Vehi", id = "Create_Vehi" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <h4 class="h4_Usr">Registro nuevo vehiculo</h4>
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        <label class="control-label col-md-4 label_user">Usuario:</label>
+                        <div class="col-md-8">
+                            @Html.Raw(ViewData["_SelectUsua"])
+                            <span class="field-validation-valid text-danger" data-valmsg-for="documento" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4 label_user">Placa:</label>
+                        <div class="col-md-8">
+                            <input type="text" id="placa_vehiculo_cliente" name="placa_vehiculo_cliente" class="form-control form-control_user" required />
+                            <span class="field-validation-valid text-danger" data-valmsg-for="placa_vehiculo_cliente" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4 label_user">Marca:</label>
+                        <div class="col-md-8">
+                            @Html.Raw(ViewData["_SelectMarc"])
+                            <span class="field-validation-valid text-danger" data-valmsg-for="marca_vehiculo" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-4 label_user">Referencia:</label>
+                        <div class="col-md-8">
+                            <input type="text" id="referencia_vehiculo" name="referencia_vehiculo" class="form-control form-control_user" required />
+                            <span class="field-validation-valid text-danger" data-valmsg-for="referencia_vehiculo" data-valmsg-replace="true"></span>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-4 label_user">Cilindraje:</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control form-control_user" id="cilindraje_vehiculo" name="cilindraje_vehiculo" required />
+                            <span class="field-validation-valid text-danger" data-valmsg-for="cilindraje_vehiculo" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-8">
+                            <button type="button" class="btn btn-default btn-default_usr" id="guarda_veh">Registrar</button>
+                        </div>
+                    </div>}
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    jQuery(function ($) {
+        $("#contrasena").attr('title', 'La contraseña debe contener minimo 8 carateres, \n una letra minuscula, una mayuscula y un numero.');
+        $("#contrasena").tooltipster();
+
+        var mensaje = "@ViewBag.Message";
+        //alert("ingresa = " + mensaje);
+
+        if (mensaje != "") {
+            alert(mensaje);
+        }
+
+        if (mensaje == "1") {
+            $("#message").html('<label>Registro guardado con Exito.:</label>');
+        } else if (mensaje == "0") {
+            $("#message").text('<label>El Usuario ya existe.:</label>');
+        }
+    });
+</script>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

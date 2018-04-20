@@ -1,0 +1,41 @@
+﻿@model IEnumerable<RacePuntos.Datos.personas>
+
+@{
+    ViewBag.Title = "Informe Usuarios";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    List<RacePuntos.Datos.sp_RepUsuarios_Result> lsUsuarios = new List<RacePuntos.Datos.sp_RepUsuarios_Result>();
+}
+
+<div class="container">
+    <div class="col-md-12 Puntos">
+        <div class="row">
+            <div>
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-default">
+                        <a href="@Url.Action("Report",new {id= "PDF", rdlc = "Usuarios", NameDataSet="Usuarios"})" target="_blank" style="color:#000 !important; font-weight:bolder;">
+                            Descargar Informe
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <table id="LisUsuarios" class="table table-responsive cell-border" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Usuario</th>
+                        <th>Vehiculo</th>
+                        <th>Placa</th>
+                        <th>Puntos Redimidos</th>
+                        <th>Total Puntos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @Html.Raw(ViewData["_TableUsuarios"])
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
